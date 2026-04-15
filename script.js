@@ -1,4 +1,1 @@
-body {
-    text-align: center;
-    font-family: Arial;
-}
+console.log("Typing Speed Project");
