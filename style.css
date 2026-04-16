@@ -1,102 +1,211 @@
+<<<<<<< HEAD
 
+=======
+/* RESET */
+>>>>>>> css
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #141e30, #243b55);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #e2e8f0;
 }
 
+/* CONTAINER */
 .container {
-    width: 700px;
-    padding: 30px;
+    width: 750px;
+    padding: 35px;
     border-radius: 20px;
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     text-align: center;
+    transition: 0.3s ease;
 }
 
+/* TITLE */
 h1 {
     margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
+/* LEVEL BUTTONS */
 .levels button {
     margin: 5px;
-    padding: 8px 15px;
-    border-radius: 6px;
+    padding: 8px 16px;
+    border-radius: 20px;
     border: none;
-    background: #ffb347;
+    background: rgba(255,255,255,0.1);
+    color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
+.levels button:hover {
+    background: #38bdf8;
+    color: black;
+}
+
+/* STATS */
 .stats {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
-    font-size: 18px;
+    margin: 25px 0;
+    font-size: 16px;
+    background: rgba(255,255,255,0.05);
+    padding: 12px 15px;
+    border-radius: 12px;
 }
 
+/* PROGRESS BAR */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #22c55e, #4ade80);
+    transition: width 0.2s ease;
+}
+
+/* TEXT DISPLAY */
 #text-display {
     text-align: left;
     margin-bottom: 20px;
-    line-height: 1.6;
+    line-height: 1.8;
     font-size: 18px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.3);
+    min-height: 100px;
 }
 
+/* TEXT STATES */
 .correct {
-    color: #00ff9d;
+    color: #22c55e;
 }
 
 .wrong {
-    color: #ff4d4d;
+    color: #ef4444;
 }
 
+.current {
+    border-bottom: 2px solid #38bdf8;
+}
+
+/* INPUT */
 textarea {
     width: 100%;
     height: 120px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: none;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    resize: none;
+    transition: 0.3s;
 }
 
+textarea:focus {
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 0 10px #38bdf8;
+}
+
+/* BUTTONS */
 .buttons {
     margin-top: 15px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px 18px;
     margin: 5px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-weight: bold;
-    background: #00c6ff;
-    color: black;
-    transition: 0.3s;
+    font-weight: 600;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    transform: scale(1.05);
-    background: #0072ff;
-    color: white;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 5px 20px rgba(56,189,248,0.5);
 }
 
+/* RESULT BOX */
 .result-box {
     margin-top: 20px;
     padding: 15px;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    background: rgba(0,0,0,0.4);
     font-size: 18px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+
+/* LEADERBOARD */
+.leaderboard {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.leaderboard h3 {
+    margin-bottom: 10px;
+}
+
+#scores li {
+    list-style: none;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    transition: 0.2s;
+}
+
+#scores li:hover {
+    background: rgba(56,189,248,0.2);
+}
+
+/* LIGHT MODE */
+body.light {
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+    color: #111;
+}
+
+body.light .container {
+    background: rgba(255,255,255,0.8);
+    color: black;
+}
+
+body.light textarea {
+    background: #fff;
+    color: black;
+}
+
+body.light #text-display {
+    background: #f8fafc;
+}
+
+body.light .stats {
+    background: rgba(0,0,0,0.05);
 }
 
