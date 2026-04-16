@@ -1,1 +1,0 @@
-# Typing-speed-mini-project
