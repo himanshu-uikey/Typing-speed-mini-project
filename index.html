@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Typing Speed Tester Ultimate</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>⌨️ Typing Speed Tester</h1>
+
+    <!-- THEME -->
+    <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+
+    <!-- LEVELS -->
+    <div class="levels">
+        <button onclick="setLevel('easy')">Easy</button>
+        <button onclick="setLevel('medium')">Medium</button>
+        <button onclick="setLevel('hard')">Hard</button>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <p>⏱ <span id="time">0</span>s</p>
+        <p>⚡ <span id="wpm">0</span> WPM</p>
+        <p>🎯 <span id="accuracy">100</span>%</p>
+        <p>❌ <span id="mistakes">0</span></p>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress-bar">
+        <div id="progress"></div>
+    </div>
+
+    <!-- TEXT -->
+    <div id="text-display"></div>
+
+    <!-- INPUT -->
+    <textarea id="input" placeholder="Start typing..." disabled></textarea>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <button onclick="startTest()">Start</button>
+        <button onclick="finishTest()">Done</button>
+        <button onclick="resetTest()">Reset</button>
+    </div>
+
+    <!-- RESULT -->
+    <div id="final-result" class="result-box"></div>
+
+    <!-- LEADERBOARD -->
+    <div class="leaderboard">
+        <h3>🏆 Leaderboard</h3>
+        <ul id="scores"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
