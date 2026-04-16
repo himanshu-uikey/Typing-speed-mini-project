@@ -1,3 +1,4 @@
+
 const texts = {
     easy: ["The sun rises in the east.", "I love coffee.", "Cats are playful."],
     medium: ["Typing improves with practice.", "JavaScript builds interactive apps."],
@@ -147,3 +148,5 @@ function showScores() {
 }
 
 showScores();
+console.log("Typing Speed Project");
+
